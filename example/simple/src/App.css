@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 1000px;
+    height: 800px;
+    font-family:'SamsungSmart_Latin Thin';
+}
+  
+.box-container {
+    position: absolute;
+    left:30px;
+    top:30px;
+    width: 600px;
+    height: 600px;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.box{
+  width: 50px;
+  height: 50px;
+  color: white;
+  background-color: burlywood;
+  font-size: 15px;
+}
+
+.box.focused{
+  border: 2px solid blueviolet;
+}
