@@ -11,9 +11,6 @@ var config = {
     name: 'react-tv'
   },
   plugins: [
-    // nodeResolve({
-    //   jsnext: true
-    // }),
     babel({
       babelrc: false,
       exclude: 'node_modules/**',
