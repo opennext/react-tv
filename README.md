@@ -18,3 +18,6 @@ change dir to react-tv\example\simple
 ```
 npm run start
 ```
+
+### npm package 
+https://www.npmjs.com/package/react-tv-ui
