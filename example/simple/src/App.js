@@ -27,6 +27,9 @@ class App extends Component {
           <Focusable name='focusable-3' className='box' onFocused={() => {
             console.log('onFocused...3')
           }}><div>F3</div></Focusable>
+          <Focusable name='focusable-4' className='box' onFocused={() => {
+            console.log('onFocused...4')
+          }}><div>F4</div></Focusable>
         </div>
       </div>
     );
