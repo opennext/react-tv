@@ -9,7 +9,7 @@ class App extends Component {
         <div className='box-container'>
           <Focusable name='focusable-1' className='box' initialFocus={true} onBlurred={() => {
             console.log('onBlurred...')
-            }}
+          }}
             onFocused={() => {
               console.log('onFocused...')
             }}

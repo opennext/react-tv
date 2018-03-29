@@ -18,6 +18,7 @@ change dir to react-tv\example\simple
 ```
 npm run start
 ```
+![focus example](example/simple/focus.png)
 
 ### npm package 
 https://www.npmjs.com/package/react-tv-ui

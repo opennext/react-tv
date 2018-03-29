@@ -71,7 +71,7 @@ strategies[Constant.DEFAULT.DISTANCE_CALCULATION_STRATEGY] = (function () {
     var toPoint = getMiddlePointOnTheEdge(to, OPPOSITE_DIRECTION[direction]);
 
     if (isCorrespondingDirection(fromPoint, toPoint, direction)) {
-      return Math.sqrt(Math.pow(fromPoint.x - toPoint.x, 2) + Math.pow(fromPoint.y - toPoint.y, 2));
+      return Math.sqrt(Math.pow(fromPoint.x - toPoint.x, 2) + Math.pow(fromPoint.y - toPoint.y, 2))
     }
 
     return Infinity;
@@ -118,33 +118,29 @@ const createNearestFocusableFinder = () => {
   return nearestFocusableFinder
 }
 
-function getWindow(elem) {
-  return (elem != null && elem === elem.window) ? elem : elem.nodeType === 9 && elem.defaultView;
-}
-
 const offsetPosition = (elem) => {
-  var docElem, win, box = { top: 0, left: 0 }, doc = elem && elem.ownerDocument;
+  var rootElement , win, box = { top: 0, left: 0 }, doc = elem && elem.ownerDocument
   if (!doc) {
-    return;
+    return
   }
-  docElem = doc.documentElement;
-  box = elem.getBoundingClientRect();
-  win = getWindow(doc);
+  rootElement  = doc.documentElement
+  box = elem.getBoundingClientRect()
+  win = (doc != null && doc === doc.window) ? doc : doc.nodeType === 9 && doc.defaultView
   return {
-    top: box.top + win.pageYOffset - docElem.clientTop,
-    left: box.left + win.pageXOffset - docElem.clientLeft
+    top: box.top + win.pageYOffset - rootElement.clientTop,
+    left: box.left + win.pageXOffset - rootElement.clientLeft
   }
 }
 
 const getPosition = (target) => {
-  var focusableDOM = target.focusableDOM//ReactDOM.findDOMNode(target);
-  var offset = offsetPosition(focusableDOM);
+  var focusableDOM = target.focusableDOM
+  var offset = offsetPosition(focusableDOM)
   return {
     left: offset.left,
     top: offset.top,
     width: focusableDOM.offsetWidth,
     height: focusableDOM.offsetHeight
-  };
+  }
 }
 
 const nearestFocusableFinder = getNearestFocusableFinderInstance()

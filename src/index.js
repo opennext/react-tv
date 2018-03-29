@@ -1,5 +1,5 @@
 import Focusable from './focus/Focusable'
-//import focus from './focus/focus'
+import focus from './focus/focus'
 import warning from './utils/warning'
 
 /*
@@ -24,5 +24,5 @@ if (
 
 export {
   Focusable,
-  //focus
+  focus
 }

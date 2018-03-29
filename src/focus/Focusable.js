@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Constant, setCurrentFocusItem } from './focus'
+
+import {Constant,setCurrentFocusItem } from './focus'
+//import focus from './focus'
+//Constant = focus.Constant
+//setCurrentFocusItem = focus.setCurrentFocusItem
 import nearestFocusableFinder from './nearestFocusableFinder'
 
 class Focusable extends Component {

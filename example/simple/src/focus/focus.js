@@ -154,7 +154,7 @@ const getNextFocusItem = (direction) => {
 
 const controller = getControllerInstance()
 
-export {
+export default {
   Constant,
   setCurrentFocusItem,
   getCurrentFocusItem,
